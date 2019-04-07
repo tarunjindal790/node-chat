@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node server/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha server/**/*.test.js",
+    "test-watch":"nodemon --exec 'npm test'"
   },
   "engines": {
     "node": "8.11.3"
@@ -17,5 +18,9 @@
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
     "socketio": "^1.0.0"
+  },
+  "devDependencies": {
+    "expect": "^24.7.1",
+    "mocha": "^6.0.2"
   }
 }
